@@ -5,6 +5,7 @@
 @corDoTextoDoBotao: #000;
 @corDoFundoDoBotao:  #ecad0e;
 @corDoTextoDoInput: #fff;
+@corDoNumeroSorteado: #059d0d;
 
 body {
     background-color: @corDeFundo;
@@ -49,6 +50,12 @@ input {
     border-bottom: 6px solid @corDoTextoDoInput;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0; /* <-- elimina as setas de adicionamento numerico existente na lateral */
+} 
+
 .resultado {
     padding: 14px;
     margin-top: 30px;
@@ -59,7 +66,8 @@ input {
         font-weight: bold;
         font-size: 3em;
         display: block;
-        text-align: center
+        text-align: center;
+        color: @corDoNumeroSorteado;
     };
 
 }
